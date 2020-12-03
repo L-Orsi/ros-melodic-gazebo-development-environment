@@ -1,0 +1,9 @@
+version: '2'
+services:
+  ros-dev:
+    image: osrf/ros:melodic-desktop-full
+    container_name: ros-dev
+    entrypoint:
+      - /ros_entrypoint.sh
+    command:
+      - roscore
