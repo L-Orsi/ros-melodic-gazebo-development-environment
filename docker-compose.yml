@@ -1,7 +1,7 @@
 version: '2'
 services:
   ros-dev:
-    image: osrf/ros:melodic-desktop-full
+    build: .
     container_name: ros-dev
     entrypoint:
       - /ros_entrypoint.sh
@@ -12,3 +12,4 @@ services:
       - QT_X11_NO_MITSHM=1
     volumes:
       - /tmp/.X11-unix:/tmp/.X11-unix:rw
+      - ./catkin_ws:/root/catkin_ws
