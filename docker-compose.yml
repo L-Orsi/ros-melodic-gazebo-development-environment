@@ -1,7 +1,9 @@
+# Author: Lucas Orsi 2020.
 version: '2'
 services:
   ros-dev:
     build: .
+    image: lorsi/ros-melodic-dev
     container_name: ros-dev
     entrypoint:
       - /ros_entrypoint.sh
